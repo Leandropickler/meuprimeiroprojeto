@@ -1,0 +1,38 @@
+
+<!-- saved from url=(0014)about:internet -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"></head><body>
+<script>
+    if (navigator.joinAdInterestGroup) {
+        const addIgScript = document.createElement('script');
+        let src = null;
+        if (navigator.runAdAuction) {
+            if (window.FencedFrameConfig || 'src' in document.createElement('fencedframe')) {
+                src = 'https://us.creativecdn.com/ig-membership?ntk=GiHb-50ElK-MsgsA3O3_QVZiQs567FN8d0xNhDw4MfnXAqr2vnfUqm6drGgx4WrJTcrt4hzUlx_3Y6lJJ0cKSe7viShivXovjVFyM40sANaWR8XiQVzoej52hCMimqjB';
+            } else {
+                src = 'https://us.creativecdn.com/ig-membership?ntk=GiHb-50ElK-MsgsA3O3_QVZiQs567FN8d0xNhDw4MfnXAqr2vnfUqm6drGgx4WrJTcrt4hzUlx_3Y6lJJ0cKSe7viShivXovjVFyM40sANZv-Z7ObWLGkh7oXb0RWVn1';
+            }
+        } else {
+            if (window.FencedFrameConfig || 'src' in document.createElement('fencedframe')) {
+                src = 'https://us.creativecdn.com/ig-membership?ntk=GiHb-50ElK-MsgsA3O3_QVZiQs567FN8d0xNhDw4MfnXAqr2vnfUqm6drGgx4WrJTcrt4hzUlx_3Y6lJJ0cKSe7viShivXovjVFyM40sANbTRKg9XOCdPQb_aDAby-a9';
+            } else {
+                src = 'https://us.creativecdn.com/ig-membership?ntk=GiHb-50ElK-MsgsA3O3_QVZiQs567FN8d0xNhDw4MfnXAqr2vnfUqm6drGgx4WrJTcrt4hzUlx_3Y6lJJ0cKSe7viShivXovjVFyM40sANbEHfqf3ofByEWffp9Vti8z';
+            }
+        }
+
+        if ('cookieDeprecationLabel' in navigator) {
+            navigator.cookieDeprecationLabel.getValue().then((label) => {
+                if (label) {
+                    src += "&lbl=" + label;
+                }
+
+                addIgScript.setAttribute('src', src);
+                document.body.appendChild(addIgScript);
+            });
+        } else {
+            addIgScript.setAttribute('src', src);
+            document.body.appendChild(addIgScript);
+        }
+    }
+</script><script src="./ig-membership"></script>
+
+</body></html>
